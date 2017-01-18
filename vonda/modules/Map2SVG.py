@@ -153,7 +153,7 @@ class PVisualizer:
         for self.ModifySVG.svg_line in self.ModifySVG.L_metabolic_map:           
             if ('id="{0}'.format(reaction_suffix)) in self.ModifySVG.svg_line:
                 self.PerformOperations.findReaction(reaction_suffix)
-            elif (style_element in self.ModifySVG.svg_line) and (self.PerformOperations.IsDoMapping == True) and (self.PerformOperations.r_id in L_input_r_ids):
+            if (style_element in self.ModifySVG.svg_line) and (self.PerformOperations.IsDoMapping == True) and (self.PerformOperations.r_id in L_input_r_ids):
                 r_value = D_r_ids[self.PerformOperations.r_id]
                 self.ModifySVG.dashedLine2solidLine() 
                 if r_value:
@@ -237,7 +237,7 @@ class PVisualizer:
         for self.ModifySVG.svg_line in self.ModifySVG.L_metabolic_map:
             if ('id="{0}'.format(reaction_suffix)) in self.ModifySVG.svg_line:
                 self.PerformOperations.findReaction(reaction_suffix)
-            elif (style_element in self.ModifySVG.svg_line) and (self.PerformOperations.IsDoMapping == True) and (self.PerformOperations.r_id in L_input_r_ids):                
+            if (style_element in self.ModifySVG.svg_line) and (self.PerformOperations.IsDoMapping == True) and (self.PerformOperations.r_id in L_input_r_ids):                
                 N_modules = len(L_modules)
                 for i in range(N_modules):
                     if self.PerformOperations.r_id in L_modules[i]:                                                
